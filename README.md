@@ -9,15 +9,14 @@ app_port: 7860
 
 # ✏️ Hand2Excal
 
-Convert handwritten flowcharts into editable [Excalidraw](https://excalidraw.com) diagrams using **Qwen2.5-VL** AI vision model via HuggingFace Inference API.
+Convert handwritten flowcharts to [Excalidraw](https://excalidraw.com) files.
 
 ## ✨ Features
 
-- 📸 Upload a photo of your handwritten flowchart
-- 🤖 AI extracts shapes, text, colors, and connections
-- 📐 Generates a valid `.excalidraw` file with proper bindings
-- 🖊️ Open directly in Excalidraw web app
-- 🌙 Beautiful dark-themed web UI + CLI support
+- 📸 Upload a photo
+- 📐 Extract shapes, text, and arrows
+- 🖊️ Open in Excalidraw
+- 🌙 Dark UI + CLI
 
 ## 🚀 Quick Start
 
@@ -71,7 +70,7 @@ python -m app.cli path/to/photo.jpg -o flowchart.excalidraw
 
 | Component | Technology |
 |-----------|-----------|
-| AI Model | Qwen2.5-VL-72B-Instruct via HuggingFace |
+| Model | Qwen2.5-VL-7B-Instruct |
 | Backend | Python, FastAPI |
 | Frontend | Vite + React |
 | Output | Excalidraw JSON format |
