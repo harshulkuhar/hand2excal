@@ -58,18 +58,6 @@ conda activate hand_to_excalidraw
 python -m app.cli path/to/photo.jpg -o flowchart.excalidraw
 ```
 
-## ☁️ Deploy to Render
-
-This project includes a [`render.yaml`](render.yaml) Blueprint for one-click deployment on [Render](https://render.com) (free tier available).
-
-1. Push your code to **GitHub**
-2. Go to [render.com](https://render.com) → **New** → **Blueprint**
-3. Connect your repo — Render auto-detects `render.yaml`
-4. Set the `HF_API_TOKEN` environment variable in the Render dashboard
-5. Deploy — your app will be live at `https://hand-to-excalidraw.onrender.com`
-
-> **Note:** On the free tier the service sleeps after 15 min of inactivity. The first request after sleep takes ~30s to wake up.
-
 ## 🛠️ Tech Stack
 
 | Component | Technology |
@@ -78,7 +66,6 @@ This project includes a [`render.yaml`](render.yaml) Blueprint for one-click dep
 | Backend | Python, FastAPI |
 | Frontend | Vite + React |
 | Output | Excalidraw JSON format |
-| Hosting | Render (free tier) |
 
 ## 📁 Project Structure
 
@@ -97,7 +84,5 @@ hand-to-excalidraw/
 │       │   └── ResultPanel.jsx# Download & open results
 │       └── index.css          # Dark theme + animations
 ├── .env.example               # API token template
-├── .python-version            # Python version pin for Render
-├── render.yaml                # Render deployment config
 └── pyproject.toml             # Python project config
 ```
