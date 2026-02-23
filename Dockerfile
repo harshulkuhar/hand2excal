@@ -1,5 +1,5 @@
 # ---- Stage 1: Build the React frontend ----
-FROM node:20-slim AS frontend-build
+FROM node:20-slim AS hand2excal-frontend-build
 WORKDIR /build/frontend
 COPY frontend/package.json frontend/package-lock.json ./
 RUN npm ci
@@ -21,7 +21,7 @@ RUN pip install --no-cache-dir .
 COPY app/ ./app/
 
 # Copy built frontend from stage 1
-COPY --from=frontend-build /build/frontend/dist ./frontend/dist
+COPY --from=hand2excal-frontend-build /build/frontend/dist ./frontend/dist
 
 # Switch to non-root user (required by HF Spaces)
 USER user

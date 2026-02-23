@@ -15,13 +15,13 @@ from .vision import extract_flowchart_from_bytes
 from .excalidraw_builder import build_excalidraw
 
 app = FastAPI(
-    title="Hand-to-Excalidraw",
+    title="Hand2Excal",
     description="Convert hand-drawn flowcharts to Excalidraw files",
     version="0.1.0",
 )
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(message)s", datefmt="%H:%M:%S")
-log = logging.getLogger("hand2excalidraw")
+log = logging.getLogger("hand2excal")
 
 # CORS for Vite dev server
 app.add_middleware(

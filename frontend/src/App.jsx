@@ -116,7 +116,7 @@ export default function App() {
     <div className="app-container">
       <header className="app-header">
         <div className="app-logo">✏️</div>
-        <h1 className="app-title">Hand to Excalidraw</h1>
+        <h1 className="app-title">Hand2Excal</h1>
         <p className="app-subtitle">
           Transform your hand-drawn flowcharts into editable Excalidraw
           diagrams powered by AI
@@ -200,7 +200,7 @@ export default function App() {
       <footer className="app-footer">
         Powered by{' '}
         <a
-          href="https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct"
+          href="https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct"
           target="_blank"
           rel="noopener"
         >

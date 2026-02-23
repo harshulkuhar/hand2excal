@@ -1,5 +1,5 @@
 ---
-title: Hand to Excalidraw
+title: Hand2Excal
 emoji: ✏️
 colorFrom: purple
 colorTo: blue
@@ -7,7 +7,7 @@ sdk: docker
 app_port: 7860
 ---
 
-# ✏️ Hand to Excalidraw
+# ✏️ Hand2Excal
 
 Convert hand-drawn flowcharts into editable [Excalidraw](https://excalidraw.com) diagrams using **Qwen2.5-VL** AI vision model via HuggingFace Inference API.
 
@@ -31,8 +31,8 @@ Convert hand-drawn flowcharts into editable [Excalidraw](https://excalidraw.com)
 
 ```bash
 # The conda env should already be created, but if not:
-conda create -n hand_to_excalidraw python=3.11 -y
-conda activate hand_to_excalidraw
+conda create -n hand2excal python=3.11 -y
+conda activate hand2excal
 
 # Install Python dependencies
 pip install -e .
@@ -50,7 +50,7 @@ HF_API_TOKEN=hf_your_token_here
 
 ```bash
 # Terminal 1: Start the backend
-conda activate hand_to_excalidraw
+conda activate hand2excal
 uvicorn app.server:app --reload --port 8000
 
 # Terminal 2: Start the frontend
@@ -63,7 +63,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 ### 4. CLI usage
 
 ```bash
-conda activate hand_to_excalidraw
+conda activate hand2excal
 python -m app.cli path/to/photo.jpg -o flowchart.excalidraw
 ```
 
@@ -79,7 +79,7 @@ python -m app.cli path/to/photo.jpg -o flowchart.excalidraw
 ## 📁 Project Structure
 
 ```
-hand-to-excalidraw/
+hand2excal/
 ├── app/
 │   ├── vision.py              # Qwen2.5-VL image analysis
 │   ├── excalidraw_builder.py  # Excalidraw JSON generator

@@ -1,4 +1,4 @@
-# Hand to Excalidraw — Walkthrough
+# Hand2Excal — Walkthrough
 
 ## What Was Built
 
@@ -18,35 +18,35 @@ graph LR
 ### Backend (`app/`)
 | File | Purpose |
 |------|---------|
-| [vision.py](file:///Users/nonu/Workspace/REPOSITORIES/hand-to-excalidraw/app/vision.py) | Sends image to Qwen2.5-VL, extracts shapes/text/arrows as JSON |
-| [excalidraw_builder.py](file:///Users/nonu/Workspace/REPOSITORIES/hand-to-excalidraw/app/excalidraw_builder.py) | Converts structured data → valid Excalidraw JSON with bindings |
-| [server.py](file:///Users/nonu/Workspace/REPOSITORIES/hand-to-excalidraw/app/server.py) | FastAPI with `POST /api/convert` endpoint |
-| [cli.py](file:///Users/nonu/Workspace/REPOSITORIES/hand-to-excalidraw/app/cli.py) | CLI: `python -m app.cli photo.jpg -o out.excalidraw` |
+| [vision.py](file:///Users/nonu/Workspace/REPOSITORIES/hand2excal/app/vision.py) | Sends image to Qwen2.5-VL, extracts shapes/text/arrows as JSON |
+| [excalidraw_builder.py](file:///Users/nonu/Workspace/REPOSITORIES/hand2excal/app/excalidraw_builder.py) | Converts structured data → valid Excalidraw JSON with bindings |
+| [server.py](file:///Users/nonu/Workspace/REPOSITORIES/hand2excal/app/server.py) | FastAPI with `POST /api/convert` endpoint |
+| [cli.py](file:///Users/nonu/Workspace/REPOSITORIES/hand2excal/app/cli.py) | CLI: `python -m app.cli photo.jpg -o out.excalidraw` |
 
 ### Frontend (`frontend/src/`)
 | File | Purpose |
 |------|---------|
-| [App.jsx](file:///Users/nonu/Workspace/REPOSITORIES/hand-to-excalidraw/frontend/src/App.jsx) | State machine: idle → preview → processing → done/error |
-| [UploadZone.jsx](file:///Users/nonu/Workspace/REPOSITORIES/hand-to-excalidraw/frontend/src/components/UploadZone.jsx) | Drag-and-drop + click-to-upload |
-| [ResultPanel.jsx](file:///Users/nonu/Workspace/REPOSITORIES/hand-to-excalidraw/frontend/src/components/ResultPanel.jsx) | Download `.excalidraw` + open Excalidraw |
-| [index.css](file:///Users/nonu/Workspace/REPOSITORIES/hand-to-excalidraw/frontend/src/index.css) | Dark glassmorphic theme with animations |
+| [App.jsx](file:///Users/nonu/Workspace/REPOSITORIES/hand2excal/frontend/src/App.jsx) | State machine: idle → preview → processing → done/error |
+| [UploadZone.jsx](file:///Users/nonu/Workspace/REPOSITORIES/hand2excal/frontend/src/components/UploadZone.jsx) | Drag-and-drop + click-to-upload |
+| [ResultPanel.jsx](file:///Users/nonu/Workspace/REPOSITORIES/hand2excal/frontend/src/components/ResultPanel.jsx) | Download `.excalidraw` + open Excalidraw |
+| [index.css](file:///Users/nonu/Workspace/REPOSITORIES/hand2excal/frontend/src/index.css) | Dark glassmorphic theme with animations |
 
 ### Config
 | File | Purpose |
 |------|---------|
-| [pyproject.toml](file:///Users/nonu/Workspace/REPOSITORIES/hand-to-excalidraw/pyproject.toml) | Python project with FastAPI, huggingface-hub deps |
-| [.env.example](file:///Users/nonu/Workspace/REPOSITORIES/hand-to-excalidraw/.env.example) | Template for HF API token + model config |
-| [README.md](file:///Users/nonu/Workspace/REPOSITORIES/hand-to-excalidraw/README.md) | Setup & usage instructions |
+| [pyproject.toml](file:///Users/nonu/Workspace/REPOSITORIES/hand2excal/pyproject.toml) | Python project with FastAPI, huggingface-hub deps |
+| [.env.example](file:///Users/nonu/Workspace/REPOSITORIES/hand2excal/.env.example) | Template for HF API token + model config |
+| [README.md](file:///Users/nonu/Workspace/REPOSITORIES/hand2excal/README.md) | Setup & usage instructions |
 
 ## UI Preview
 
-![Hand to Excalidraw homepage](/Users/nonu/.gemini/antigravity/brain/8ded3149-43e1-4945-bee8-758344fd573e/hand_to_excalidraw_home_1771785265201.png)
+![Hand2Excal homepage](/Users/nonu/.gemini/antigravity/brain/8ded3149-43e1-4945-bee8-758344fd573e/hand2excal_home_1771785265201.png)
 
 ## How to Run
 
 ```bash
 # Backend (terminal 1)
-conda activate hand_to_excalidraw
+conda activate hand2excal
 cp .env.example .env   # add your HF token
 uvicorn app.server:app --reload --port 8000
 
