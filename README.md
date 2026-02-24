@@ -13,8 +13,9 @@ Convert handwritten flowcharts to [Excalidraw](https://excalidraw.com) files.
 
 ## ✨ Features
 
-- 📸 Upload a photo
-- 📐 Extract shapes, text, and arrows
+- 📸 Upload a photo of a handwritten flowchart
+- 📝 Paste text definitions for logical flows/processes
+- 📐 Extract shapes, text, and arrows automatically
 - 🖊️ Open in Excalidraw
 - 🌙 Dark UI + CLI
 
@@ -70,7 +71,8 @@ python -m app.cli path/to/photo.jpg -o flowchart.excalidraw
 
 | Component | Technology |
 |-----------|-----------|
-| Model | Qwen2.5-VL-7B-Instruct |
+| Vision Model | Qwen2.5-VL-7B-Instruct |
+| Text Model | Meta-Llama-3-8B-Instruct |
 | Backend | Python, FastAPI |
 | Frontend | Vite + React |
 | Output | Excalidraw JSON format |
@@ -89,6 +91,7 @@ hand2excal/
 │       ├── App.jsx            # Main app (state machine)
 │       ├── components/
 │       │   ├── UploadZone.jsx # Drag-and-drop upload
+│       │   ├── TextInputZone.jsx # Text processor input
 │       │   └── ResultPanel.jsx# Download & open results
 │       └── index.css          # Dark theme + animations
 ├── .env.example               # API token template
